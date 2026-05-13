@@ -31,6 +31,11 @@ export default function Sidebar() {
       className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 py-16"
     >
       <div>
+        <img
+          src="/raj-image.webp"
+          alt={profile.name}
+          className="mb-6 h-40 w-40 rounded-full object-cover ring-2 ring-accent/30"
+        />
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tightish text-text-light">
           {profile.name}
         </h1>
