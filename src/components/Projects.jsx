@@ -9,11 +9,11 @@ function Card({ p, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="mb-12 group relative grid grid-cols-8 gap-4 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+      className="mb-12 group relative grid grid-cols-8 gap-3 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
     >
       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-surface/40 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]" />
 
-      <div className="z-10 sm:order-2 sm:col-span-6">
+      <div className="z-10 col-span-6 order-2 sm:col-span-6">
         <h3 className="font-medium leading-snug text-text-light">
           <span className="inline-flex items-baseline font-medium leading-tight text-text-light group-hover:text-accent transition-colors">
             {p.title}
@@ -36,8 +36,8 @@ function Card({ p, index }) {
         </ul>
       </div>
 
-      <div className="z-10 mb-4 mt-1 sm:order-1 sm:col-span-2 sm:translate-y-1">
-        <div className="aspect-video rounded border border-border bg-surface/40 flex items-center justify-center font-mono text-2xl text-accent/50 group-hover:text-accent/80 group-hover:border-accent/40 transition-colors">
+      <div className="z-10 col-span-2 order-1 mb-2 mt-1 sm:mb-4 sm:translate-y-1">
+        <div className="aspect-video rounded border border-border bg-surface/40 flex items-center justify-center font-mono text-lg sm:text-2xl text-accent/50 group-hover:text-accent/80 group-hover:border-accent/40 transition-colors">
           {String(index + 1).padStart(2, '0')}
         </div>
         <p className="mt-2 text-[10px] uppercase tracking-widest text-muted font-mono">{p.category}</p>

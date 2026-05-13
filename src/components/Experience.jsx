@@ -9,18 +9,18 @@ function Card({ job, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="mb-12 group relative grid grid-cols-8 gap-4 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+      className="mb-12 group relative grid grid-cols-8 gap-3 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
     >
       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-surface/40 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]" />
 
       <header
-        className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-muted sm:col-span-2"
+        className="z-10 mb-1 mt-1 col-span-8 text-xs font-semibold uppercase tracking-wide text-muted sm:col-span-2 sm:mb-2"
         aria-label={job.date}
       >
         {job.date}
       </header>
 
-      <div className="z-10 sm:col-span-6">
+      <div className="z-10 col-span-8 sm:col-span-6">
         <h3 className="font-medium leading-snug text-text-light">
           <span>
             <span className="inline-flex items-baseline font-medium leading-tight text-text-light group-hover:text-accent">

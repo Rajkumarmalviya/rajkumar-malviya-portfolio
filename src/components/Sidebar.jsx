@@ -28,19 +28,19 @@ export default function Sidebar() {
   return (
     <header
       id="top"
-      className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 py-16"
+      className="pt-4 pb-10 sm:pt-8 sm:pb-12 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
     >
       <div>
         <img
           src="/raj-image.webp"
           alt={profile.name}
-          className="mb-6 h-40 w-40 rounded-full object-cover ring-2 ring-accent/30"
+          className="mb-6 h-28 w-28 sm:h-36 sm:w-36 lg:h-40 lg:w-40 rounded-full object-cover ring-2 ring-accent/30"
         />
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tightish text-text-light">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tightish text-text-light">
           {profile.name}
         </h1>
-        <h2 className="mt-3 text-lg font-medium text-text sm:text-xl">{profile.title}</h2>
-        <p className="mt-4 max-w-xs leading-normal text-muted">{profile.tagline}</p>
+        <h2 className="mt-3 text-base sm:text-lg lg:text-xl font-medium text-text">{profile.title}</h2>
+        <p className="mt-4 max-w-xs text-sm sm:text-base leading-normal text-muted">{profile.tagline}</p>
 
         <nav className="nav hidden lg:block mt-16" aria-label="In-page navigation">
           <ul className="w-max">
