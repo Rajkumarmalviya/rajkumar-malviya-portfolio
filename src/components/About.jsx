@@ -19,9 +19,12 @@ export default function About() {
       <StickyHeading>About</StickyHeading>
 
       <motion.div {...fadeIn} className="space-y-4 text-slate-custom">
+        <p className="border-l-2 border-accent pl-4 text-sm font-medium text-text-light">
+          {profile.availability}
+        </p>
         <p>{profile.summary}</p>
         <p>
-          Currently I'm an <span className="text-text-light">Associate Software Engineer at Primathon</span>,
+          Currently I'm a <span className="text-text-light">Software Engineer at Primathon</span>,
           where I lead frontend architecture for high-traffic e-commerce platforms — building everything
           from PDP/PLP/Checkout surfaces with{' '}
           <span className="text-text-light">Next.js App Router + RSC</span> to JSON-driven sales funnels with{' '}
@@ -37,6 +40,7 @@ export default function About() {
           <span className="text-text-light">LLM integrations, agentic workflows, and MCP</span> — the
           places where great frontends meet AI primitives.
         </p>
+
       </motion.div>
     </section>
   );

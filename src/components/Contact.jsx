@@ -59,8 +59,8 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
       >
         <p className="text-slate-custom leading-relaxed">
-          I'm always open to frontend / full-stack roles, AI-product collaborations, and observability
-          consulting. Reach me at{' '}
+          I’m open to Software Engineer and Frontend Engineer opportunities focused on React, Next.js,
+          TypeScript, and production e-commerce systems. Reach me at{' '}
           <a href={`mailto:${profile.email}`} className="text-accent link-underline font-medium">
             {profile.email}
           </a>{' '}
@@ -121,8 +121,8 @@ export default function Contact() {
         </form>
 
         <p className="mt-12 text-xs text-muted">
-          Loosely designed in Figma and coded in VS Code. Built with{' '}
-          <span className="text-text-light">React, Vite, Tailwind CSS</span> and{' '}
+          Designed in Figma and built with{' '}
+          <span className="text-text-light">Next.js, React, Tailwind CSS</span> and{' '}
           <span className="text-text-light">Framer Motion</span>. Typeset in{' '}
           <span className="text-text-light">Inter</span> &{' '}
           <span className="text-text-light">JetBrains Mono</span>.

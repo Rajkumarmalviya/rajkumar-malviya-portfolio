@@ -9,7 +9,7 @@ function Card({ p, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      className="mb-12 group relative grid grid-cols-8 gap-3 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50"
+      className="mb-12 group relative grid grid-cols-8 gap-3 transition-all duration-300 sm:gap-8 md:gap-4 md:hover:-translate-y-1 md:hover:!opacity-100 md:group-hover/list:opacity-50"
     >
       <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition lg:-inset-x-6 lg:block lg:group-hover:bg-surface/40 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)]" />
 
@@ -24,6 +24,36 @@ function Card({ p, index }) {
         </h3>
         <p className="text-xs text-muted mt-0.5">{p.subtitle}</p>
         <p className="mt-2 text-sm leading-normal text-slate-custom">{p.description}</p>
+        <p className="mt-3 border-l border-accent/50 pl-3 text-xs leading-relaxed text-muted">
+          <span className="font-semibold uppercase tracking-widest text-accent/80">Contribution</span>{' '}
+          {p.challenges}
+        </p>
+
+        {(p.url || p.links?.length) && (
+          <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-xs font-medium">
+            {p.url && (
+              <a
+                href={p.url}
+                target="_blank"
+                rel="noreferrer"
+                className="link-underline text-accent"
+              >
+                Visit live project <span aria-hidden="true">↗</span>
+              </a>
+            )}
+            {p.links?.map((link) => (
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                className="link-underline text-muted hover:text-accent"
+              >
+                {link.label} <span aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        )}
 
         <ul className="mt-3 flex flex-wrap" aria-label="Technologies used">
           {p.stack.map((t) => (
@@ -37,10 +67,14 @@ function Card({ p, index }) {
       </div>
 
       <div className="z-10 col-span-2 order-1 mb-2 mt-1 sm:mb-4 sm:translate-y-1">
-        <div className="aspect-video rounded border border-border bg-surface/40 flex items-center justify-center font-mono text-lg sm:text-2xl text-accent/50 group-hover:text-accent/80 group-hover:border-accent/40 transition-colors">
+        <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded border border-border bg-surface/40 font-mono text-lg text-accent/50 transition-colors group-hover:border-accent/40 group-hover:text-accent/80 sm:text-2xl">
+          <span className="absolute inset-x-0 top-0 h-px bg-accent/60" />
           {String(index + 1).padStart(2, '0')}
         </div>
-        <p className="mt-2 text-[10px] uppercase tracking-widest text-muted font-mono">{p.category}</p>
+        <p className="mt-2 flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-muted">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          {p.category}
+        </p>
       </div>
     </motion.li>
   );

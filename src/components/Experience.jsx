@@ -65,20 +65,16 @@ export default function Experience() {
         ))}
       </ol>
 
-      <div className="mt-6">
+      <div className="mt-6 border-t border-border/70 pt-5 text-sm text-muted">
+        For a detailed work history, connect with me on{' '}
         <a
-          href={profile.resumeUrl}
+          href={profile.socials.linkedin}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-baseline font-medium leading-tight text-text-light group"
+          className="text-accent link-underline"
         >
-          <span className="border-b border-transparent pb-px transition group-hover:border-accent motion-reduce:transition-none">
-            View Full <span className="whitespace-nowrap">Résumé</span>
-          </span>
-          <span aria-hidden="true" className="ml-1 inline-block translate-y-px transition-transform group-hover:translate-x-1">
-            →
-          </span>
-        </a>
+          LinkedIn <span aria-hidden="true">↗</span>
+        </a>.
       </div>
     </section>
   );

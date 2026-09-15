@@ -1,10 +1,10 @@
 export const profile = {
   name: 'Rajkumar Malviya',
   initials: 'RM',
-  title: 'Frontend Software Engineer',
-  tagline: 'Frontend Engineer · Observability & AI',
+  title: 'Software Engineer',
+  tagline: 'Frontend architecture · E-commerce · AI systems',
   summary:
-    'Frontend Software Engineer with 2+ years of experience building scalable, performance-optimized web applications using Next.js, React Server Components, Astro.js, and TypeScript across 7+ high-traffic e-commerce platforms. Skilled in frontend architecture, API orchestration, Web Vitals, and observability. Passionate about AI-powered products and LLM API integration.',
+    'Software Engineer with 2.5+ years of experience building scalable, performance-focused web applications and storefronts using React, Next.js, Astro.js, and TypeScript. I work across frontend architecture, API orchestration, observability, and production delivery.',
   highlightKeywords: [
     'Next.js',
     'React Server Components',
@@ -16,18 +16,18 @@ export const profile = {
     'observability',
   ],
   location: 'Indore, India',
+  availability: 'Open to Software Engineer and Frontend Engineer roles',
   email: 'er.rajkumar.malviya@gmail.com',
   phone: '+91-7354489974',
   socials: {
-    linkedin: 'https://www.linkedin.com/in/rajkumar-malviya/',
-    github: 'https://github.com/',
-    hackerrank: 'https://www.hackerrank.com/',
+    linkedin: 'https://www.linkedin.com/in/engineer-rajkumar-malviya/',
+    github: 'https://github.com/Rajkumarmalviya/',
+    hackerrank: 'https://www.hackerrank.com/profile/rajmalvi789',
   },
-  resumeUrl: '/Rajkumar_Malviya_Resume.pdf',
 };
 
 export const stats = [
-  { value: '2+', label: 'Years of experience' },
+  { value: '2.5+', label: 'Years of experience' },
   { value: '7+', label: 'E-commerce platforms shipped' },
   { value: '5+', label: 'JSON-driven sales funnels' },
   { value: '1', label: 'Developer of the Month award' },
@@ -70,23 +70,46 @@ export const skills = [
   { name: 'Docker', group: 'Observability' },
   { name: 'Git Submodules', group: 'Observability' },
   { name: 'Linux', group: 'Observability' },
+  { name: 'PostgreSQL', group: 'Data & Testing' },
+  { name: 'Prisma', group: 'Data & Testing' },
+  { name: 'Playwright', group: 'Data & Testing' },
+  { name: 'Jest', group: 'Data & Testing' },
 ];
 
-export const skillGroups = ['All', 'Frontend', 'AI/LLM', 'E-commerce', 'Backend', 'Observability'];
+export const skillGroups = ['All', 'Frontend', 'AI/LLM', 'E-commerce', 'Backend', 'Observability', 'Data & Testing'];
+
+export const techStack = [
+  'React.js',
+  'Next.js',
+  'TypeScript',
+  'Astro.js',
+  'JavaScript',
+  'Tailwind CSS',
+  'Framer Motion',
+  'Redux',
+  'Node.js',
+  'Express.js',
+  'Shopify APIs',
+  'GoKwik',
+  'Sentry',
+  'Playwright',
+  'GitHub Actions',
+  'Docker',
+];
 
 export const experience = [
   {
-    role: 'Associate Software Engineer',
+    role: 'Software Engineer',
     company: 'Primathon Technology Ventures',
     location: 'Indore, India',
     year: '2025',
     date: 'January 2025 – Present',
     bullets: [
-      'Architected end-to-end PDP, PLP, and Checkout surfaces for the Kilrr e-commerce ecosystem using Next.js App Router, React Server Components, and TypeScript; integrated A/B testing and Data Layer pipelines for conversion experimentation.',
-      'Led organization-wide Sentry rollout across 7+ high-traffic Shopify merchants including Aqualogica, BBlunt, and Wellversed; triaged production errors and reduced alert noise via custom rules and dashboards.',
-      'Engineered 5+ JSON-driven, performance-optimized sales funnels using Astro.js and Shopify APIs, achieving sub-second page loads and strong Web Vitals.',
-      'Built a Git submodule-based pre-commit testing framework integrated into CI/CD pipelines, significantly reducing regression risks across the merchant codebase.',
-      'Owned full staging-to-production launch of the 7-Colonies 8-page marketing site featuring complex motion design.',
+      'Designed and developed scalable web applications and storefront experiences using React, Next.js, TypeScript, Astro.js, and modern frontend architecture.',
+      'Implemented Sentry monitoring and observability across 7+ production Shopify storefronts, enabling faster debugging and proactive issue resolution.',
+      'Developed reusable JSON-driven rendering architecture using Astro.js and Shopify APIs, accelerating onboarding of new storefront experiences.',
+      'Built a Git submodule-based testing framework for CI/CD pre-commit validation, improving code quality and deployment reliability.',
+      'Owned staging-to-production delivery of the 7 Colonies marketing platform and collaborated with designers, QA, product managers, and backend developers.',
     ],
     stack: ['Next.js', 'RSC', 'TypeScript', 'Astro.js', 'Shopify', 'Sentry', 'GitHub Actions'],
   },
@@ -97,9 +120,9 @@ export const experience = [
     year: '2024',
     date: 'January 2024 – October 2024',
     bullets: [
-      'Engineered Mobilify, a low-code drag-and-drop platform for mobile app generation; designed the core form builder engine and scalable state management using Redux.',
-      'Designed type-safe RESTful APIs using Node.js and Express.js, reducing server response latency by 40% through optimized query patterns and middleware.',
-      'Drove Agile sprints and led technical code reviews, improving team deployment efficiency by 25%.',
+      'Designed responsive React dashboard features for Mobilify, including Settings, Support, Notifications, Form Builder, and reusable UI components.',
+      'Developed and integrated REST APIs using Node.js and Express.js for reliable frontend and backend communication.',
+      'Collaborated in an Agile environment, participated in code reviews, resolved production issues, and improved deployment reliability.',
     ],
     stack: ['React', 'Redux', 'Node.js', 'Express.js', 'REST'],
   },
@@ -107,68 +130,46 @@ export const experience = [
 
 export const projects = [
   {
-    title: 'Open Store',
-    subtitle: 'Scalable Storefront Platform',
+    title: '7 Colonies',
+    subtitle: 'Production Marketing Platform',
     description:
-      'Architecting a next-generation storefront framework with modular static-template registries, JSON-driven rendering, and reusable component libraries for rapid merchant onboarding.',
+      'Built the complete production marketing website from scratch to deployment, delivering a responsive multi-page platform with motion-driven user experiences.',
     challenges:
-      'Designing a registry that stays type-safe across hundreds of template variants while keeping bundle size and TTFB low. Adopted React Server Components and JSON-driven routes to push rendering work to the edge.',
-    stack: ['Next.js', 'TypeScript', 'Astro.js', 'Shopify APIs', 'RSC'],
-    category: 'E-commerce',
-  },
-  {
-    title: 'Sentry Automation & Observability Tooling',
-    subtitle: 'Production Triage at Scale',
-    description:
-      'Co-developed internal tooling to automate merchant error monitoring and production triage; designed for extensibility into AI-driven anomaly detection.',
-    challenges:
-      'Aggregating noisy Sentry events across 7+ merchants and de-duplicating them with custom fingerprinting rules. Built a Node.js SDK wrapper exposing REST endpoints for dashboard ingestion.',
-    stack: ['Node.js', 'Sentry SDK', 'REST APIs'],
-    category: 'Observability',
-  },
-  {
-    title: 'Kilrr — PDP/PLP/Checkout',
-    subtitle: 'Conversion-optimised Storefront',
-    description:
-      'End-to-end Product Detail, Listing, and Checkout surfaces using Next.js App Router + RSC, with integrated A/B testing and a typed Data Layer pipeline for analytics.',
-    challenges:
-      'Coordinating server and client rendering boundaries while preserving interactivity for cart and recommendation widgets, and keeping LCP under 2.5s on mid-range mobile.',
-    stack: ['Next.js', 'RSC', 'TypeScript', 'A/B Testing', 'Data Layer'],
-    category: 'E-commerce',
-  },
-  {
-    title: '7-Colonies Marketing Site',
-    subtitle: 'Motion-rich Brand Site',
-    description:
-      'Owned the full staging-to-production launch of an 8-page marketing site featuring complex motion design and scroll-driven storytelling.',
-    challenges:
-      'Choreographing dozens of scroll-linked Framer Motion timelines without hurting Web Vitals on mobile. Used IntersectionObserver gating and asset prefetch budgets to keep CLS at zero.',
-    stack: ['Next.js', 'Framer Motion', 'TailwindCSS'],
+      'Translated visual concepts into reusable Next.js and TypeScript systems across Home, Colonies, Forum, Characters, News, Discover, and About pages.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
     category: 'Frontend',
+    url: 'https://www.7colonies.com/',
   },
   {
-    title: 'JSON-driven Sales Funnels',
-    subtitle: 'Astro.js + Shopify',
+    title: 'E-commerce Funnel Platform Suite',
+    subtitle: 'Conversion-focused storefronts',
     description:
-      'Engineered 5+ JSON-driven, performance-optimized sales funnels achieving sub-second page loads and strong Web Vitals.',
+      'Built high-performance one-page e-commerce funnels with Astro.js, Shopify GraphQL APIs, and GoKwik checkout integrations.',
     challenges:
-      'Decoupling marketing-controlled funnel content from code via JSON schemas, while ensuring Shopify checkout flows remain conversion-safe and analytics events fire reliably.',
-    stack: ['Astro.js', 'Shopify APIs', 'JSON Schema'],
+      'Created reusable static section architectures and dynamic product rendering systems optimized for fast rendering, Core Web Vitals, SEO, and scalable merchant onboarding.',
+    stack: ['Astro.js', 'TypeScript', 'Shopify GraphQL', 'GoKwik', 'JavaScript'],
     category: 'E-commerce',
+    links: [
+      { label: 'Plix', url: 'https://store.plixlife.com/' },
+      { label: 'Azah', url: 'https://shop.azah.in/' },
+      { label: 'BBlunt', url: 'https://buy.bblunt.com/' },
+      { label: 'Saku', url: 'https://zia.saku.co.in/' },
+    ],
   },
   {
-    title: 'Pre-commit Testing Framework',
-    subtitle: 'Git Submodule · CI/CD',
+    title: 'Mobilify',
+    subtitle: 'Drag-and-drop mobile app builder',
     description:
-      'Built a Git submodule-based pre-commit testing framework integrated into CI/CD pipelines, significantly reducing regression risks across the merchant codebase.',
+      'Worked on a low-code platform that enables users to build custom mobile applications through drag-and-drop workflows and configurable UI sections.',
     challenges:
-      'Sharing test fixtures across 7+ merchant repos without duplication. Designed a submodule layout + GitHub Actions matrix so each merchant only runs the slice of tests relevant to its surface.',
-    stack: ['GitHub Actions', 'Git Submodules', 'Node.js'],
-    category: 'Observability',
+      'Developed section builders, settings management, notifications, authentication flows, and Redux-based state architecture in collaboration with backend teams.',
+    stack: ['React.js', 'TypeScript', 'Redux', 'Node.js', 'Express.js'],
+    category: 'Full-stack',
+    url: 'https://www.mobilifyapp.com/',
   },
 ];
 
-export const projectCategories = ['All', 'E-commerce', 'Observability', 'Frontend'];
+export const projectCategories = ['All', 'E-commerce', 'Observability', 'Frontend', 'Full-stack'];
 
 export const achievements = [
   {
