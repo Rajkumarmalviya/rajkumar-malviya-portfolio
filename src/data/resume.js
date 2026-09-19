@@ -130,24 +130,54 @@ export const experience = [
 
 export const projects = [
   {
-    title: '7 Colonies',
-    subtitle: 'Production Marketing Platform',
+    title: 'Open Store',
+    subtitle: 'Scalable Storefront Platform',
     description:
-      'Built the complete production marketing website from scratch to deployment, delivering a responsive multi-page platform with motion-driven user experiences.',
+      'Architecting a next-generation storefront framework with modular static-template registries, JSON-driven rendering, and reusable component libraries for rapid merchant onboarding.',
     challenges:
-      'Translated visual concepts into reusable Next.js and TypeScript systems across Home, Colonies, Forum, Characters, News, Discover, and About pages.',
-    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+      'Designing a registry that stays type-safe across hundreds of template variants while keeping bundle size and TTFB low. Adopted React Server Components and JSON-driven routes to push rendering work to the edge.',
+    stack: ['Next.js', 'TypeScript', 'Astro.js', 'Shopify APIs', 'RSC'],
+    category: 'E-commerce',
+  },
+  {
+    title: 'Sentry Automation & Observability Tooling',
+    subtitle: 'Production Triage at Scale',
+    description:
+      'Co-developed internal tooling to automate merchant error monitoring and production triage; designed for extensibility into AI-driven anomaly detection.',
+    challenges:
+      'Aggregating noisy Sentry events across 7+ merchants and de-duplicating them with custom fingerprinting rules. Built a Node.js SDK wrapper exposing REST endpoints for dashboard ingestion.',
+    stack: ['Node.js', 'Sentry SDK', 'REST APIs'],
+    category: 'Observability',
+  },
+  {
+    title: 'Kilrr - PDP/PLP/Checkout',
+    subtitle: 'Conversion-optimised Storefront',
+    description:
+      'End-to-end Product Detail, Listing, and Checkout surfaces using Next.js App Router + RSC, with integrated A/B testing and a typed Data Layer pipeline for analytics.',
+    challenges:
+      'Coordinating server and client rendering boundaries while preserving interactivity for cart and recommendation widgets, and keeping LCP under 2.5s on mid-range mobile.',
+    stack: ['Next.js', 'RSC', 'TypeScript', 'A/B Testing', 'Data Layer'],
+    category: 'E-commerce',
+  },
+  {
+    title: '7 Colonies Marketing Site',
+    subtitle: 'Motion-rich Brand Site',
+    description:
+      'Owned the full staging-to-production launch of an 8-page marketing site featuring complex motion design and scroll-driven storytelling.',
+    challenges:
+      'Choreographing dozens of scroll-linked Framer Motion timelines without hurting Web Vitals on mobile. Used IntersectionObserver gating and asset prefetch budgets to keep CLS at zero.',
+    stack: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
     category: 'Frontend',
     url: 'https://www.7colonies.com/',
   },
   {
-    title: 'E-commerce Funnel Platform Suite',
-    subtitle: 'Conversion-focused storefronts',
+    title: 'JSON-driven Sales Funnels',
+    subtitle: 'Astro.js + Shopify',
     description:
-      'Built high-performance one-page e-commerce funnels with Astro.js, Shopify GraphQL APIs, and GoKwik checkout integrations.',
+      'Engineered 5+ JSON-driven, performance-optimized sales funnels achieving sub-second page loads and strong Web Vitals.',
     challenges:
-      'Created reusable static section architectures and dynamic product rendering systems optimized for fast rendering, Core Web Vitals, SEO, and scalable merchant onboarding.',
-    stack: ['Astro.js', 'TypeScript', 'Shopify GraphQL', 'GoKwik', 'JavaScript'],
+      'Decoupling marketing-controlled funnel content from code via JSON schemas, while ensuring Shopify checkout flows remain conversion-safe and analytics events fire reliably.',
+    stack: ['Astro.js', 'Shopify APIs', 'JSON Schema'],
     category: 'E-commerce',
     links: [
       { label: 'Plix', url: 'https://store.plixlife.com/' },
@@ -158,11 +188,11 @@ export const projects = [
   },
   {
     title: 'Mobilify',
-    subtitle: 'Drag-and-drop mobile app builder',
+    subtitle: 'Drag-and-drop Mobile App Builder',
     description:
-      'Worked on a low-code platform that enables users to build custom mobile applications through drag-and-drop workflows and configurable UI sections.',
+      'Contributed to a low-code mobile app generation platform that lets users build custom applications through drag-and-drop workflows and configurable UI sections.',
     challenges:
-      'Developed section builders, settings management, notifications, authentication flows, and Redux-based state architecture in collaboration with backend teams.',
+      'Building flexible section configuration and settings workflows while keeping complex Redux state predictable across authentication, notifications, and app customization screens.',
     stack: ['React.js', 'TypeScript', 'Redux', 'Node.js', 'Express.js'],
     category: 'Full-stack',
     url: 'https://www.mobilifyapp.com/',
